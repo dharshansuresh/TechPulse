@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+venv/
+env/
+.venv/
+
+# App storage (keep directories, ignore local databases/vectors)
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/chroma_db/*
+!storage/chroma_db/.gitkeep
+storage/logs/*
+!storage/logs/.gitkeep
+storage/app.db
+*.db
+*.sqlite
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS Specific
+.DS_Store
+Thumbs.db

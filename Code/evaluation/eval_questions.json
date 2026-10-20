@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Q1",
+    "category": "Software Components",
+    "question": "What software components are defined in the Powertrain controller architecture?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["TorqueArbitrationSWC", "EngineSpeedSensorSWC", "ThrottleActuatorSWC"],
+    "expected_page": 5
+  },
+  {
+    "id": "Q2",
+    "category": "Interfaces and Ports",
+    "question": "What are the ports and interfaces of TorqueArbitrationSWC?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["Rp_DriverDemand", "Rp_EngineSpeed", "Pp_TorqueCommand", "If_DriverDemand"],
+    "expected_page": 6
+  },
+  {
+    "id": "Q3",
+    "category": "Timing and Cycle Time",
+    "question": "What is the periodic execution rate of TorqueArbitrationSWC in v1.0?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["10ms", "OsTask_10ms"],
+    "expected_page": 6
+  },
+  {
+    "id": "Q4",
+    "category": "Functional Safety (ISO 26262)",
+    "question": "What functional safety ASIL level is allocated to the torque arbitration function?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["ASIL B"],
+    "expected_page": 4
+  },
+  {
+    "id": "Q5",
+    "category": "Bus Communication",
+    "question": "What CAN frame ID and cycle time are configured for CAN_Powertrain_TorqueDemand?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["0x1A4", "10ms", "CAN FD"],
+    "expected_page": 13
+  },
+  {
+    "id": "Q6",
+    "category": "E2E Protection",
+    "question": "What E2E protection profile is configured for powertrain CAN signals?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["Profile P01", "CRC8", "Data ID 0x12"],
+    "expected_page": 14
+  },
+  {
+    "id": "Q7",
+    "category": "Error Handling & Diagnostics",
+    "question": "What Dem diagnostic event is generated for throttle position mismatch and what is the fail-safe action?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["0x921401", "limp-home", "50 Nm"],
+    "expected_page": 17
+  },
+  {
+    "id": "Q8",
+    "category": "UDS Diagnostic Services",
+    "question": "Which UDS Diagnostic Services and Data Identifiers (DIDs) are supported in Powertrain v1.0?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["0x22", "0x10", "ReadDataByIdentifier", "0x2100", "0xF190", "VIN"],
+    "expected_page": 16
+  },
+  {
+    "id": "Q9",
+    "category": "Version Differences",
+    "question": "What are the major architectural changes between Powertrain v1.0 and v2.0?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v2.0.pdf",
+    "expected_keywords": ["RegenerativeBrakingSWC", "ASIL C", "5ms", "Profile P02"],
+    "expected_page": 1
+  },
+  {
+    "id": "Q10",
+    "category": "Negative Test (Missing Information)",
+    "question": "What is the exact battery cell chemistry (e.g. LFP or NMC) specified for the vehicle high-voltage pack?",
+    "expected_document": "AUTOSAR_Powertrain_Domain_HLD_v1.0.pdf",
+    "expected_keywords": ["insufficient", "not specified", "not mentioned"],
+    "expected_page": null
+  }
+]
