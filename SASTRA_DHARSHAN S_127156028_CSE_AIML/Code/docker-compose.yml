@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  automotive-ai-assistant:
+    build: .
+    container_name: autosar_ai_assistant
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - ./storage:/app/storage
+    environment:
+      - ENVIRONMENT=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - BACKEND_API_URL=http://localhost:8000
+      - STREAMLIT_PORT=8501
+      - CHROMA_COLLECTION_NAME=autosar_hld_knowledge
+      - EMBEDDING_MODEL_NAME=all-MiniLM-L6-v2
+    restart: unless-stopped
